@@ -1,0 +1,208 @@
+/*
+Template Name: School Education
+File: Navigation CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#header #topnav{
+	display:block;
+	float:left;
+	margin:20px 0 0 0;
+	padding:0;
+	font-size:18px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	text-align:right;
+        border: 0px solid red;
+        width: 100%;
+	}
+        
+ #topnav_menu,#topnav_menu ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+     display: block;
+     
+}
+#topnav_menu {
+    
+    clear: both;
+    float: left;
+    font-size: 16px;	
+    height: 40px;
+    padding: 0 0 0 9px;
+    position: relative;
+    width:auto;
+    border:0px solid yellow;
+   display: block;
+   
+}
+#topnav_menu ul {
+    
+    border-radius: 0 0 5px 5px;
+    border-width: 0 1px 1px;
+    left: -9999px;
+    overflow: hidden;
+    position: absolute;
+     border:0px solid yellow;
+    top: -9999px;
+    z-index: 2;
+  
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+
+    
+}
+#topnav_menu li {
+    float: left;
+    
+    position: relative;
+    list-style: none;
+}
+#topnav_menu li a {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-weight: normal;    
+    margin: 0px 10px;
+    padding: 5px 15px 0;
+    position: relative;
+    height: 25px;
+     border:0px solid yellow;
+	
+}
+#topnav_menu li a.active{
+/*	background-image:url(../images/home_icon.png);*/
+	margin:0px 5px 0px 0px;
+         border:0px solid yellow;
+        border-radius: 3px;
+	}
+#topnav_menu li a.active:hover{
+	
+	margin:0px 5px 0px 0px;
+         border:0px solid yellow;
+        border-radius: 3px;
+	}
+/* #topnav_menu li:hover > a{
+          
+          text-decoration: underline ;
+        }        */
+#topnav_menu li:hover, #topnav_menu a:focus, #topnav_menu a:hover, #topnav_menu a:active {
+    color: #F61D08;
+    
+}
+#topnav_menu li:hover ul.subs {
+    left: 0px;
+    top: 30px;
+    width: 238px;
+    background:#838B92;
+ border-top:0px solid #829138;
+       z-index: 9000;
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+#topnav_menu ul.subs li {
+    width: 98%;
+    float: left;
+    
+}
+#topnav_menu ul.subs li a {
+    
+    float: left;
+       color: #F61D08;
+    background:none;
+    border-bottom:0px solid yellow;	 
+}
+#topnav_menu ul.subs li a:hover {
+  
+    color:#fff;
+   border-bottom:0px solid yellow;	 
+}
+
+/*
+...............................Menu CSS....................
+#header ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#header li{
+	display:inline;
+	margin-right:35px;
+	}
+
+#header li a:link, #header li a:visited, #header li a:hover{
+	margin:0;
+	padding:0 3px 10px 3px;
+	color:#FFFFFF;
+	background-color:#2D3134;
+	border-bottom:1px solid #2D3134;
+	}
+
+#header li a:hover, #header li.active a{
+	color:#829138;
+	background-color:#2D3134;
+	border-bottom-color:#829138;
+	}
+
+#header #topnav li.last{
+	margin-right:0;
+	}
+
+*/
+
+/* ----------------------------------------------Column Navigation-------------------------------------*/
+
+#column .subnav{display:block; width:250px; padding:25px; background-color:#F9F9F9; margin-bottom:30px;}
+
+#column .subnav h2{
+	margin:0 0 20px 0;
+	padding:0 0 14px 0;
+	font-size:20px;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#666666;
+	background-color:#F9F9F9;
+	line-height:normal;
+	border-bottom:1px dotted #666666;
+	}
+
+#column .subnav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#column .subnav li{
+	margin:0 0 3px 0;
+	padding:0;
+	}
+
+#column .subnav ul ul, #column .subnav ul ul ul, #column .subnav ul ul ul ul, #column .subnav ul ul ul ul ul{border-top:none; padding-top:0;}
+
+#column .subnav a{
+	display:block;
+	margin:0;
+	padding:5px 10px 5px 20px;
+	color:#777777;
+	background:url("../images/blue_file.gif") no-repeat 10px center #F9F9F9;
+	text-decoration:none;
+	border-bottom:1px dotted #666666;
+	}
+
+#column .subnav a:hover{color:#829138; background-color:#F9F9F9;}
+
+#column .subnav ul ul a, #column .subnav ul ul ul a, #column .subnav ul ul ul ul a, #column .subnav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #F9F9F9;}
+#column .subnav ul ul a{padding-left:40px; background-position:30px center;}
+#column .subnav ul ul ul a{padding-left:50px; background-position:40px center;}
+#column .subnav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#column .subnav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}
