@@ -1118,6 +1118,7 @@ class Result_model_admin extends CI_Model{
                 'program_offer_id' => $programOfferId,
                 'semester_id' => $semesterId
             ];
+             // echo '<pre>';print_r($dtls_data);exit;
             $this->db->insert('marksheet_dtls', $dtls_data);
         }
     }
@@ -1131,16 +1132,24 @@ class Result_model_admin extends CI_Model{
             ->where('semester_id', $semesterId)
             ->get('marksheet_mst')
             ->row_array();
+           // echo '<pre>'; print_r($total);exit;
         if ($total) {
             $master_id = $total['id'];
+            // $data['record'] = $this->db
+            //     ->where('master_id', $master_id)
+            //     ->get('marksheet_dtls')
+            //     ->result_array();
+            ///sdn
             $data['record'] = $this->db
-                ->where('master_id', $master_id)
-                ->get('marksheet_dtls')
-                ->result_array();
-
-           // echo '<pre>';
-           // print_r($data);exit;
-
+            ->select('marksheet_dtls.*,section.sectionId,section.sectionName,marksheet_mst.position,marksheet_mst.program_offer_id,programoffer.*')
+            ->from('marksheet_dtls')
+            ->join('marksheet_mst','marksheet_mst.id=marksheet_dtls.master_id')
+            ->join('programoffer','programoffer.programOfferId=marksheet_dtls.program_offer_id')
+            ->join('section','programoffer.sectionId=section.sectionId')
+            ->where('master_id', $master_id)
+            ->get()
+            ->result_array();
+             // echo '<pre>'; print_r($data['record']);exit;
             $common=0;
             $optional=0;
             $extra=0;
@@ -1170,6 +1179,8 @@ class Result_model_admin extends CI_Model{
                     $extra = $extra + $item['total_mark'];
                     $extra_full = $extra_full + intval($item['full_mark']);
                 }
+                // echo '<pre>';
+                // print_r($item['sectionName']);exit;
             }
 
             $data['total'] = $total;

@@ -46,6 +46,7 @@ Print
                <th>Sl.</th>
                <th>Student Id</th>
                <th>Student Name</th>
+               <th>Section</th>
                <th>Roll No</th>
                <th>Full Marks</th>
                <th>Obtain Marks</th>
@@ -64,6 +65,7 @@ Print
                <td><?php echo $key+1; ?></td>
                <td><?php echo $val->studentId; ?></td>
                <td><?php echo isset($studentInfo[$val->studentId]) ? $studentInfo[$val->studentId] : ''; ?></td>
+               <td><?php echo $val->sectionName; ?></td>
                <td><?php echo isset($student_roll[$val->studentId]) ? $student_roll[$val->studentId] : ''; ?></td>
                <td><?php echo $val->total_common_full_marks; ?></td>
                <td><?php echo $val->total_common_marks; ?></td>

@@ -352,9 +352,8 @@
 </div>
 <table style=" font-family: cambria;margin: 10px 10px; border-collapse: collapse;">
     <tr>
-        <td colspan="6" style="padding:10px 10px 5px;text-align: right; font-size: 14px; font-weight: bold;"><span class="color_green" style="">Student Position</span> : <?php echo $records['total']['position']; ?></td>
-        <td colspan="6" style="padding:10px 10px 5px;text-align: left; font-size: 14px; font-weight: bold;"></td>
-<!--        <td colspan="6" style="padding:10px 10px 5px;text-align: left; font-size: 14px; font-weight: bold;"> Highest Obtain Marks :  --><?php //echo round($records['highest']['total_obtain_marks']); ?><!-- </td>-->
+        <td colspan="6" style="padding:10px 10px 5px;text-align: right; font-size: 14px; font-weight: bold;"><span class="color_green" style="">Section Position</span> : <?php echo $records['total']['position']; ?></td>
+        <td colspan="6" style="padding:10px 10px 5px;text-align: left; font-size: 14px; font-weight: bold;"><span class="color_green" style="">Class Position</span></td>
     </tr>
 </table>
 

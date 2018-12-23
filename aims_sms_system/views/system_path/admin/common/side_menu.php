@@ -351,7 +351,15 @@
                     <li class="<?php if(!empty($generate)){ echo $generate; } ?>">
                         <a href="<?php echo admin_Url();?>/generatesummaryresult/result_view">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            View Result
+                            Section Result
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="<?php if(!empty($generate)){ echo $generate; } ?>">
+                        <a href="<?php echo admin_Url();?>/generatesummaryresult/result_viewsd">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            View All Result
                         </a>
 
                         <b class="arrow"></b>

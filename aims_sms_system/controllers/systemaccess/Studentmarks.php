@@ -1941,6 +1941,7 @@ class Studentmarks extends MY_Controller {
             ->select('
                     sac.studentId,
                     sac.programOfferId,
+                    section.sectionName,
                     mks.total_marks,
                     mks.total_obtain_marks,
                     mks.gpa_point,
@@ -1948,6 +1949,8 @@ class Studentmarks extends MY_Controller {
                     mks.position
                 ')
             ->from('studentassigncourse AS sac')
+            ->join('programoffer','programoffer.programOfferId=sac.programOfferId')
+            ->join('section','programoffer.sectionId=section.sectionId')
             ->join('marksheet_mst AS mks','sac.studentId = mks.student_id and mks.semester_id = '.$semesterId.'', 'LEFT')
             ->where_in('sac.programOfferId', $programOfferId)
             ->where_not_in('mks.gpa_letter', 'F')
@@ -1956,11 +1959,11 @@ class Studentmarks extends MY_Controller {
             ->order_by('mks.gpa_point', 'DESC')
             ->get()
             ->result();
-
             $records_fail = $this->db
             ->select('
                     sac.studentId,
                     sac.programOfferId,
+                    section.sectionName,
                     mks.total_marks,
                     mks.total_obtain_marks,
                     mks.gpa_point,
@@ -1968,6 +1971,8 @@ class Studentmarks extends MY_Controller {
                     mks.position
                 ')
             ->from('studentassigncourse AS sac')
+             ->join('programoffer','programoffer.programOfferId=sac.programOfferId')
+            ->join('section','programoffer.sectionId=section.sectionId')
             ->join('marksheet_mst AS mks','sac.studentId = mks.student_id and mks.semester_id = '.$semesterId.'', 'LEFT')
             ->where_in('sac.programOfferId', $programOfferId)
             ->where('mks.gpa_letter', 'F')
